@@ -1,0 +1,10 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+# customer
+RewriteRule ^customer$   api/customer/Customer.php?cusId=all [nc,qsa]
+RewriteRule ^customer/(\d+)$   api/customer/Customer.php?cusId=$1 [nc,qsa]
+
+# coupon
+RewriteRule ^coupon$   api/coupon/Coupon.php?couponId=all [nc,qsa]
+RewriteRule ^coupon/(\d+)$   api/coupon/Coupon.php?couponId=$1 [nc,qsa]
